@@ -1,4 +1,4 @@
-package list.basicOperations;
+package list.basicOperations.list.basicOperations;
 
 public class Task {
   private String description;
@@ -9,5 +9,10 @@ public class Task {
 
   public String getDescription() {
     return description;
+  }
+
+  @Override
+  public String toString() {
+    return  description;
   }
 }

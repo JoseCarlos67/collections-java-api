@@ -1,4 +1,4 @@
-package list.basicOperations;
+package list.basicOperations.list.basicOperations;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ public class TaskList {
     return taskList.size();
   }
 
-  public void obtainTasksDescriptions() {
+  public void obtainTaskDescription() {
     System.out.println(taskList);
   }
 }
