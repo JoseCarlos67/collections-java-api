@@ -1,19 +1,29 @@
 import list.assortment.PersonOrdination;
 import list.basicOperations.Cart;
 import list.search.list.search.BookCatalog;
+import set.basicOperations.GuestSet;
+import set.search.ContactList;
 
 public class Program {
   public static void main(String[] args) {
-    PersonOrdination personOrdination = new PersonOrdination();
+    ContactList contactList = new ContactList();
 
-    personOrdination.addPeople("Pessoa 1", 36, 1.80);
-    personOrdination.addPeople("Pessoas 2", 23, 1.40);
-    personOrdination.addPeople("Pessoas 3", 19, 1.60);
-    personOrdination.addPeople("Pessoas 3", 60, 1.30);
+    contactList.showContacts();
 
-    System.out.println(personOrdination.sortByAge());
+    contactList.addContact("Camila", 123456);
+    contactList.addContact("Camila", 0);
+    contactList.addContact("Camila Cavalcante", 11111111);
+    contactList.addContact("Camila DIO", 7543554);
+    contactList.addContact("Maria Silva", 11111111);
 
-    System.out.println(personOrdination.sortByHeight());
+    contactList.showContacts();
+
+    System.out.println();
+    System.out.println(contactList.searchByName("Camila"));
+
+    System.out.println("Contato atualizado: " + contactList.updateNumberContact("Maria Silva", 454545));
+
+    System.out.println(contactList.searchByName("Maria"));
 
   }
 }

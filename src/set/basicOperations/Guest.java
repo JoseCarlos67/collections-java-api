@@ -1,5 +1,7 @@
 package set.basicOperations;
 
+import java.util.Objects;
+
 public class Guest {
   private String name;
   private int invitationCode;
@@ -15,6 +17,18 @@ public class Guest {
 
   public int getInvitationCode() {
     return invitationCode;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (o == null || getClass() != o.getClass()) return false;
+    Guest guest = (Guest) o;
+    return getInvitationCode() == guest.getInvitationCode();
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hashCode(getInvitationCode());
   }
 
   @Override
