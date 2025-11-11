@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class ProductRegistration {
-  private Set<Product> productSet;
+  public Set<Product> productSet;
 
   public ProductRegistration() {
     this.productSet = new HashSet<>();
@@ -22,7 +22,7 @@ public class ProductRegistration {
 
   public Set<Product> showProductByValue() {
     Set<Product> productsByValue = new TreeSet<>(new CompareByValue());
-    productSet.addAll(productSet);
+    productsByValue.addAll(productSet);
     return productsByValue;
   }
 }

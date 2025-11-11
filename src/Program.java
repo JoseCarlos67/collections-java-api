@@ -1,29 +1,15 @@
-import list.assortment.PersonOrdination;
-import list.basicOperations.Cart;
-import list.search.list.search.BookCatalog;
-import set.basicOperations.GuestSet;
-import set.search.ContactList;
+import set.sortment.ProductRegistration;
 
 public class Program {
   public static void main(String[] args) {
-    ContactList contactList = new ContactList();
+    ProductRegistration productRegistration = new ProductRegistration();
 
-    contactList.showContacts();
+    productRegistration.addProduct(1L, "Produto 5", 15d, 5);
+    productRegistration.addProduct(2L, "Produto 0", 20d, 10);
+    productRegistration.addProduct(1L, "Produto 3", 10d, 2);
+    productRegistration.addProduct(9L, "Produto 9", 2d, 2);
 
-    contactList.addContact("Camila", 123456);
-    contactList.addContact("Camila", 0);
-    contactList.addContact("Camila Cavalcante", 11111111);
-    contactList.addContact("Camila DIO", 7543554);
-    contactList.addContact("Maria Silva", 11111111);
-
-    contactList.showContacts();
-
-    System.out.println();
-    System.out.println(contactList.searchByName("Camila"));
-
-    System.out.println("Contato atualizado: " + contactList.updateNumberContact("Maria Silva", 454545));
-
-    System.out.println(contactList.searchByName("Maria"));
+    System.out.println(productRegistration.showProductByValue());
 
   }
 }

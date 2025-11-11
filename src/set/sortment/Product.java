@@ -22,7 +22,7 @@ public class Product implements Comparable<Product>{
             ", name='" + name + '\'' +
             ", value=" + value +
             ", quatity=" + quatity +
-            '}';
+            "}\n";
   }
 
   @Override
